@@ -7,7 +7,7 @@ import io.undertow.Handlers;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Methods;
-import com.networknt.info.ServerInfoGetHandler;
+import com.networknt.info.ServerInfoGetHandler2;
 import com.networknt.health.HealthGetHandler;
 import com.networknt.apic.handler.*;
 
@@ -20,7 +20,7 @@ public class PathHandlerProvider implements HandlerProvider {
         
             .add(Methods.GET, "/v1/health", new HealthGetHandler())
         
-            .add(Methods.GET, "/v1/server/info", new ServerInfoGetHandler())
+            .add(Methods.GET, "/v1/server/info", new ServerInfoGetHandler2())
         
         ;
     }
